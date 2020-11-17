@@ -1,0 +1,55 @@
+<!-- wp:heading -->
+<h2>I. RNN là gì?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Đầu tiên mình xin giới thiệu 1 số ứng dụng của Sequence Model (RNN)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":47,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/03/Why-sequence-models-deeplearning.ai-Coursera-Mozilla-Firefox-1024x576.jpg" alt="" class="wp-image-47"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>RNN là một biến thể của Neural Networks được sử dụng thường xuyên ở trong NLP (Natural language processing) <br>Ở một mạng Neural thông thường, các input được xử lý thông qua các layers và chúng ta có output, trong trường hợp này những input liên tiếp nhau được xem như không phụ thuộc vào nhau (independent)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tuy nhiên, khi gặp các bài toán thực tế, chúng ta lại mong muốn các input phụ thuộc (dependent) lẫn nhau. <br>Ví dụ: dự đoán chữ tiếp theo trong một chuỗi.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nói về nghĩa đen, Recurrent (tái xuất hiện) bởi vì chúng thực hiện cái task giống hệt nhau cho mỗi element của một chuỗi mà trong đó output hiện tại phụ thuộc vào việc tính toán trước đó.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":48,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/03/1-buMl05BvEPJ5P7sB5ImTCg.jpeg" alt="" class="wp-image-48"/><figcaption>Các bạn có thể tưởng tượng bức hình như một multilayer neural network với mỗi layer biểu diện sự quan sát ở một thời gian t</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2>II. Tại sao chúng ta cần RNN?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Lý do thứ nhất mà mình có thể nói từ phần trên là vì các output của thời điểm t sẽ có input là từ thời điểm t-1 và đồng thời feature X&lt;t&gt;. Từ đó chúng ta có thể tạm gọi là RNN có thể "lưu trữ" thông tin phía trước</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lý do thứ hai: một mạng NN bình thường sẽ có input và output cố định (fixed-size), RNN thì không</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p> The  parameters required for handling text will be very large in case of  Standard neural networks. RNN requires much less parameters to learn  (lý do mình tìm được, chắc mình sẽ implement một ngày không xa để tìm hiểu tại sao, hi :D)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph -->
+<p>Tuy nhiên RNN vẫn chưa đáp ứng được so với real-world problem, sắp tới mình sẽ viết thêm về LSTM, GRU. Các bạn đón xem nhé :D</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Một số tư liệu mình tham khảo: <br>https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90<br>https://www.quora.com/Why-do-we-use-an-RNN-instead-of-a-simple-neural-network</p>
+<!-- /wp:paragraph -->

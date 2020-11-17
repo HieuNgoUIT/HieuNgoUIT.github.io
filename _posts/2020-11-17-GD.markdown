@@ -1,0 +1,11 @@
+<!-- wp:paragraph -->
+<p>Gradient Descent là một thuật toán được dùng để đi tìm điểm cực tiểu của một hàm số bằng cách khởi đầu ở một điểm gần với nghiệm của hàm số, sau đó dùng một phép toán lập để đi đến điểm mà đạo hàm gần với 0:<br>VD: một hàm số phụ thuộc vào biến x sẽ được tìm kiếm theo công thức<br>         x = x - alpha * f'(x')<br>Ở đây alpha được gọi là learning rate thường là 0.01, 0.1, ...</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->

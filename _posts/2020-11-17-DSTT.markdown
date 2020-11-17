@@ -1,0 +1,135 @@
+<!-- wp:heading -->
+<h2>I. Vector</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>What is a vector</li><li>Linear combination </li><li>Basis vector</li><li>Span</li><li>Linear independent</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Vector là gì?</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":72,"width":368,"height":207,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/gif.gif" alt="" class="wp-image-72" width="368" height="207"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Một vector với tọa độ của nó có thể được hiểu là một hướng dẫn cách mà bạn sẽ đi từ gốc tọa độ (O) đến đuôi của nó</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Basis vector (vector cơ sở)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":74,"width":368,"height":207,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/linearcombination.gif" alt="" class="wp-image-74" width="368" height="207"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Trong hệ tọa độ xy, vector chỉ về phía bên phải với độ dài bằng 1 được gọi là i-hat hoặc là unit vector của trục X<br>Tương tự, vector còn lại hướng lên trên với độ dài bằng 1 được gọi là j-hat hoặc là unit vector của trục Y</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Linear combination (tổ hợp tuyến tính)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":75,"width":376,"height":211,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/linearcombination2.gif" alt="" class="wp-image-75" width="376" height="211"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Theo gif, vector cơ sở i-hat của chúng ta được scale gấp 3 lần, còn y-hat thì được scale gấp 2 lần ở hướng ngược lại. Lúc này vector của chúng ta được biểu diễn thành tổng của hai scaled vector (3)i + (-2)j</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Span (bao tuyến tính)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":77,"width":376,"height":211,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/span.gif" alt="" class="wp-image-77" width="376" height="211"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Bằng việc có được tập hợp của tất cả các linear combinations từ basis vector, chúng ta có được tất cả các điểm trong mặt phẳng 2D (đường thẳng nếu là 1D). Đây được gọi là span</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Linear indepentdent (độc lập tuyến tính)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":79,"width":396,"height":223,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/lineardepentdent.gif" alt="" class="wp-image-79" width="396" height="223"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Trong một trường hợp, khi cả hai basis vector của chúng ta chồng lên nhau, việc bỏ đi một vector mà chúng không ảnh hưởng tới span chúng ta được gọi là Linear depentdent (ngược với Linear Indepentdent)<br>Từ đó chúng ta suy ra được là các basis vector của chúng ta có tính chất Linear indepentdent với nhau</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>II. Vector basic operation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Add vectors</li><li>Multiply by a scalar</li><li>Modulus</li><li>Dot product</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Add vectors/ Multiply by a scarlar</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tổng của hai vector được tính bằng tổng của các giá trị của chúng<br>Khi nhân vector với một số thì ta nhân số đó với từng giá trị của chúng</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":85,"width":384,"height":473,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/Screenshot-from-2020-09-21-12-47-17.png" alt="" class="wp-image-85" width="384" height="473"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Modulus</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"id":86,"width":382,"height":378,"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large is-resized"><img src="http://www.some-emotions.studio/wp-content/uploads/2020/09/Screenshot-from-2020-09-21-13-01-42.png" alt="" class="wp-image-86" width="382" height="378"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Dot product (scalar product) (tích vô hướng) </h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p> Tích vô hướng của hai vectơ <strong>A</strong> = [<em>A</em><sub>1</sub>, <em>A</em><sub>2</sub>,..., <em>A</em><sub><em>n</em></sub>] và <strong>B</strong> = [<em>B</em><sub>1</sub>, <em>B</em><sub>2</sub>,..., <em>B</em><sub><em>n</em></sub>] được định nghĩa như sau: </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/af37e403a991bc025d1393175c48da59f50db69b" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Việc tính Dot product sẽ dẫn chúng ta tới một vài sự kết nối thú vị sau đây</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Dot product vs Modulus </h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4684ec0ed118a6ed4e12a43c1fb4a8cc8ef41c06" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Dot product vs Cosine</h4>
+<!-- /wp:heading -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e6c94733992f42b0576562b7936e4a160b058089" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2>III. Changing basis</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Việc thay đổi vector cơ sở có nghĩa là chúng ta đang sử dụng Dot Product lên các các vector cơ sở mới</p>
+<!-- /wp:paragraph -->

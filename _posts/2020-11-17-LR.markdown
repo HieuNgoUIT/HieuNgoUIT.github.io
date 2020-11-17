@@ -1,0 +1,3 @@
+<!-- wp:paragraph -->
+<p>Linear Regression là một thuật toán cơ bản nhất trong Supervised Learning. Giả dụ ta có một bài toán tìm giá nhà với các thuộc tính (x1 = chiều dài, x2= chiều rộng, x3= số phòng ngủ,...) với một hàm đơn giản có thể mô tả mối quan hệ giữa giá nhà y và 3 đại lượng đầu vào là:<br> f(x) = w1x1 + w2x2 +w3x3 <br>Chúng ta muốn hàm mất mát 1/2(yhat - y)^2 nhỏ nhất có thể</p>
+<!-- /wp:paragraph -->
