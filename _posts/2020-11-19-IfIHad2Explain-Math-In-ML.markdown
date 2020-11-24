@@ -16,6 +16,9 @@ There is a course that I took about what math we need in linear algebra to use i
 
 5. Eigenvectors, eigenvalues. Should we learn it, does it apply immeditely
 
+6.Still forget. why dotting is the projection?
+
+7. All the relation of dot product?
 II. Calculus
 1. Derivatetive, anti derivative?
 
@@ -28,5 +31,6 @@ II. Calculus
 4. What to do with Jacobian Matrix
 
 5. How does that mean when we say that the vector point at steepest slope
+https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/gradient-and-directional-derivatives/v/why-the-gradient-is-the-direction-of-steepest-ascent
 
 6. How does an jacobian matrix transform an vector?
