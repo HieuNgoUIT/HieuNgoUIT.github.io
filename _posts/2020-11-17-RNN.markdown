@@ -53,3 +53,5 @@
 <!-- wp:paragraph -->
 <p>Một số tư liệu mình tham khảo: <br>https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90<br>https://www.quora.com/Why-do-we-use-an-RNN-instead-of-a-simple-neural-network</p>
 <!-- /wp:paragraph -->
+
+

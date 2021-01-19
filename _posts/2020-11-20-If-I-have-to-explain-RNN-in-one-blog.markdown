@@ -32,3 +32,17 @@ hiddenstate (m, na)
 Output y (m, ny)
 hiddenstate (m, na)
 => (m, na) *  (na, ny)    = (m, ny)
+
+
+
+#notes on foward : theo keras, way = 0, nhung phan backprop thi ko thay cap nhat way?
+                    
+
+
+###implement backprop base on https://towardsdatascience.com/back-to-basics-deriving-back-propagation-on-simple-rnn-lstm-feat-aidan-gomez-c7f286ba973d
+
+#notes on building RNN step by step coursera -> + ko co dao ham layer cuoi theo Loss
+                                                + tai sao lai dao ham bien X theo Hidden state (a)?
+                                                + co dX va` da0 trong dao. ham (tuy nhien khong cap nhat?)
+                                                + chi cap nhat dWax, dWaa, dba 
+                                                + 
