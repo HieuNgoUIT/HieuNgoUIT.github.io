@@ -3,7 +3,7 @@
 Trong phần này ta sẽ tìm hiểu về các metrics sau:
 1. MSE - Mean Square Error
 2. RMSE - Root Mean Square Error
-3. R2 
+3. R-Squared
 4. MAE - Mean Absolute Error
 
 và `constant model` của chúng 
@@ -16,50 +16,57 @@ có thể hiểu `constant model` là base model của chúng ta, nếu model c�
 ![Notation](a.png)
 
 ## 1. MSE - Mean Square Error 
+> MSE calculate square different between the predictions and the target and then average those values over the examples. ![MSE](mse.png)
 
-![MSE](mse.png)
-
-> MSE calculate square different between the predictions and the target and then average those values over the examples. 
-
-Giả sử, chúng ta có tập dataset và biểu đồ bên phải với trục Y đại diện cho MSE và trục X đại diện cho kết quả dự đoán của model chúng ta. Giả sử chúng ta dự đoán đúng 4 example đầu tiên, thì ở example cuối cùng chúng ta sẽ có đường parabolal tương ứng như hình vẽ 
-
-
-
-![Mse example](b.png)
-
-Best contant : mean value
+Với biểu đồ bên dưới, trục X gồm các predictions (5, 6, 8, 9, 27) và trục Y đại diện cho MSE score. Có thể thấy nếu chỉ được dự đoán một giá trị thì 11 `(Best contant : mean value)` sẽ cho MSE score tốt nhất.
 ![msebestmodel](msebestmodel.png)
 
-## 2. RMSE
 
-![RMSE](rmse.png)
+## 2. RMSE - Root Mean Square Error
 > RMSE is very similar metric to MSE, first, we calculate MSE then we take a squared root of MSE
+![RMSE](rmse.png)
 
+### MSE vs RMSE
 Việc sử dụng RMSE khiến cho việc plot metric dể hình dung hơn bởi vì phương trình bây giờ là tuyến tính 
 
-Về khía cạnh, minimizers RMSE và MSE là một. Điều này có nghĩa là 
+Về khía cạnh minimizers RMSE và MSE là một. Chúng ta có thể suy ra: 
 MSE(a) > MSE(b) => RMSE(a) => RMSE(b) 
 
-Điều khác biệt duy nhất là phương trình đạo hàm của hai metric. Có thể thấy đạo hàm của RMSE bằng chính đạo hàm của MSE nhân thêm 1 hằng số 1/2sqrt(mse). Điều này khiến cho chúng ko thể interchangable for gradient based method. Nghĩa là chúng ta cần phải điều chỉnh một số hyperparameter khi thay đổi giữa 2 metric (learning rate là một ví dụ).
++ Khác biệt:
+    phương trình đạo hàm của hai metric. Có thể thấy đạo hàm của RMSE bằng chính đạo hàm của MSE nhân thêm 1 hằng số 1/2sqrt(mse). Điều này khiến cho chúng ko thể interchangable for gradient based method. Nghĩa là chúng ta cần phải điều chỉnh một số hyperparameter khi thay đổi giữa 2 metric (learning rate là một ví dụ).
+    ![compare](daohamcompare.png)
 
-![compare](daohamcompare.png)
+
+## 3. R-Squared 
 
 
-## R2 
+Giả sử nếu ta nói MSE score của model là 32, hay RMSE của model là 0.4 liệu chúng ta có biết được model này tốt hay không?
+
+> R2 measure how much our model is better than constant baseline, R2 will give us 0 if we are no better than baseline and 1 if the predictions are perfect.
 ![R2](r2.png)
 
-Giả sử nếu ta nói MSE score của model là 32, hay RMSE của model là 0.4 liệu chúng ta có biết được model này tốt hay không. Chính vì lý do đó R2 ra đời. R2 = 1 model tốt hơn, R2 = 0 model bth , R2 < = 1 model tệ 
-
-## MAE
-
+## 4. MAE - Mean Absolute Error
 ![mae](mae.png)
 
+> MAE calculate an everage of absolute differences between the target values and the predictions
+
+Điều quan trọng ở metric này là nó không penalize huge error như MSE (`not sensitive to outliers as MSE`)
+
+![maebest](maebest.png)
 best contant : median 
 
+### MAE vs MSE
++ Có outliers trong data? -> MAE 
++ Chúng có thật sự là outliers? -> MAE
++ Hoặc chúng là unexpected values mà chúng ta cần để ý? -> MSE 
 
 
 # Take away
+- MSE, RMSE, R-Squared 
+    + Giống nhau hoàn toàn về khía cạnh "optimization"
+- MAE
+    + `Robust` hơn đối với outliers 
 
-+ Have outliers: MAE
-+ sure outliers?: MAE 
-+ unexpected value we should care? MSE 
+
+# References
++ How to win Data Science Competition: Learn from Top Kaggler - Week 3 - Metric optimization - Regression metrics review I 
