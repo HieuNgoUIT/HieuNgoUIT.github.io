@@ -1,4 +1,4 @@
-# Metrics trong Machine Learning - Regression
+# Metrics trong Machine Learning - Regression (P1)
 
 Trong phần này ta sẽ tìm hiểu về các metrics sau:
 1. MSE - Mean Square Error
@@ -13,47 +13,38 @@ và `constant model` của chúng
 có thể hiểu `constant model` là base model của chúng ta, nếu model của chúng ta predict có score dưới score của base model => model chúng ta tệ hơn một model không học gì cả. 
 
 ## Notation
-![Notation](a.png)
+![Notation](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/397x234/0544c4c2d5259ca01ddcdc5803253704/notation.png)
 
 ## 1. MSE - Mean Square Error 
-> MSE calculate square different between the predictions and the target and then average those values over the examples. ![MSE](mse.png)
+> MSE calculate square different between the predictions and the target and then average those values over the examples. ![MSE](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/232x72/2931edd551f47c15b9cb67b29b6829d5/mse.png)
 
 Với biểu đồ bên dưới, trục X gồm các predictions (5, 6, 8, 9, 27) và trục Y đại diện cho MSE score. Có thể thấy nếu chỉ được dự đoán một giá trị thì 11 `(Best contant : mean value)` sẽ cho MSE score tốt nhất.
-![msebestmodel](msebestmodel.png)
+![msebestmodel](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/983x392/bc1eb604e8a38de13b2e83ff9aba6976/msebestmodel.png)
 
 
 ## 2. RMSE - Root Mean Square Error
 > RMSE is very similar metric to MSE, first, we calculate MSE then we take a squared root of MSE
-![RMSE](rmse.png)
+![RMSE](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/437x106/a6c671958bc456430801fc9b9f99492b/rmse.png)
 
 ### MSE vs RMSE
-Việc sử dụng RMSE khiến cho việc plot metric dể hình dung hơn bởi vì phương trình bây giờ là tuyến tính 
-
-Về khía cạnh minimizers RMSE và MSE là một. Chúng ta có thể suy ra: 
-MSE(a) > MSE(b) => RMSE(a) => RMSE(b) 
-
-+ Khác biệt:
-    phương trình đạo hàm của hai metric. Có thể thấy đạo hàm của RMSE bằng chính đạo hàm của MSE nhân thêm 1 hằng số 1/2sqrt(mse). Điều này khiến cho chúng ko thể interchangable for gradient based method. Nghĩa là chúng ta cần phải điều chỉnh một số hyperparameter khi thay đổi giữa 2 metric (learning rate là một ví dụ).
-    ![compare](daohamcompare.png)
++ Khác biệt: phương trình đạo hàm của hai metric. Có thể thấy đạo hàm của RMSE bằng chính đạo hàm của MSE nhân thêm 1 hằng số 1/2sqrt(MSE). Đối với việc sử một số gradient based method chúng ta cần phải điều chỉnh một số hyperparameter khi thay đổi giữa MSE và RMSE (learning rate là một ví dụ).
+![compare](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/577x154/9abff829c85a512ca603fb3572bfbdeb/daohamcompare.png)
 
 
 ## 3. R-Squared 
-
-
-Giả sử nếu ta nói MSE score của model là 32, hay RMSE của model là 0.4 liệu chúng ta có biết được model này tốt hay không?
+Giả sử nếu ta nói MSE score của model là 32, RMSE của model là 0.4 liệu chúng ta có biết được model này tốt hay không?
 
 > R2 measure how much our model is better than constant baseline, R2 will give us 0 if we are no better than baseline and 1 if the predictions are perfect.
-![R2](r2.png)
+![R2](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/502x188/6d07a2ffd5acbf5a75f12c3aa85923a2/r2.png)
 
 ## 4. MAE - Mean Absolute Error
-![mae](mae.png)
-
 > MAE calculate an everage of absolute differences between the target values and the predictions
+![mae](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/229x71/05971003e0d1b099b5afbd8f711c5d02/mae.png)
 
-Điều quan trọng ở metric này là nó không penalize huge error như MSE (`not sensitive to outliers as MSE`)
+Điều quan trọng ở MAE này là nó không penalize huge error như MSE (`not sensitive to outliers as MSE`)
 
-![maebest](maebest.png)
-best contant : median 
+Với biểu đồ bên dưới, trục X gồm các predictions (5, 6, 8, 9, 27) và trục Y đại diện cho MAE score. Có thể thấy nếu chỉ được dự đoán một giá trị thì 8 `(Best contant : median value)` sẽ cho MAE score tốt nhất.
+![maebest](https://trello-attachments.s3.amazonaws.com/608a81f5c3b0161441d300ab/965x370/7a0d7e009925af0cb319f2b71c59f311/maebest.png)
 
 ### MAE vs MSE
 + Có outliers trong data? -> MAE 
@@ -69,4 +60,5 @@ best contant : median
 
 
 # References
-+ How to win Data Science Competition: Learn from Top Kaggler - Week 3 - Metric optimization - Regression metrics review I 
++ [1] How to win Data Science Competition: Learn from Top Kaggler - Week 3 - Metric optimization - Regression metrics review I 
++ [2] Proof of MSE and MAE constant model
